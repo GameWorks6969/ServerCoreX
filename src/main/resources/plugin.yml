@@ -1,0 +1,85 @@
+name: ServerCoreX
+version: '${project.version}'
+main: xyz.majongtech.servercorex.ServerCoreX
+api-version: 1.18
+authors: [ GameWorks ]
+description: All the essentials for your server!
+website: https://majongtech.xyz/projects/mc/ServerCoreX/
+commands:
+  feed:
+    aliases: [ scxfeed ]
+    description: "Feeds the player!"
+    permission: "scx.staff, scx.staff.feed, sxc.staff.*"
+    permission-message: "&4You do not have permission to execute this command."
+    usage: "/feed"
+  heal:
+    aliases: [ scxheal ]
+    description: "Heals the player!"
+    permission: "scx.staff, scx.staff.heal, sxc.staff.*"
+    permission-message: "&4You do not have permission to execute this command."
+    usage: "/heal"
+  god:
+    aliases: [ scxgod ]
+    description: "Makes the player invurnable to damage!"
+    permission: "scx.staff, scx.staff.god, sxc.staff.*"
+    permission-message: "&4You do not have permission to execute this command."
+    usage: "/god"
+  gmc:
+    aliases: [ gamemodec ]
+    description: "Sets the players gamemode to creative!"
+    permission: "scx.staff, scx.staff.gmc, sxc.staff.*"
+    permission-message: "&4You do not have permission to execute this command."
+    usage: "/gmc"
+  gma:
+    aliases: [ gamemodea ]
+    description: "Sets the players gamemode to adventure!"
+    permission: "scx.staff, scx.staff.gma, sxc.staff.*"
+    permission-message: "&4You do not have permission to execute this command."
+    usage: "/gma"
+  gms:
+    aliases: [ gamemodes ]
+    description: "Sets the players gamemode to survival!"
+    permission: "scx.staff, scx.staff.gms, sxc.staff.*"
+    permission-message: "&4You do not have permission to execute this command."
+    usage: "/gms"
+  gmsp:
+    aliases: [ gamemodesp ]
+    description: "Sets the players gamemode to spectator!"
+    permission: "scx.staff, scx.staff.gmsp, sxc.staff.*"
+    permission-message: "&4You do not have permission to execute this command."
+    usage: "/gmsp"
+permissions:
+  sxc.staff.*:
+    description: Gives access to all staff commands
+    children:
+      sxc.staff.god: true
+      sxc.staff.feed: true
+      sxc.staff.heal: true
+      sxc.staff.gmc: true
+      sxc.staff.gma: true
+      sxc.staff.gms: true
+      sxc.staff.gmsp: true
+  sxc.staff:
+    description: Gives access to all staff commands (Recommended to use sxc.staff.*)
+    children:
+      sxc.staff.god: true
+      sxc.staff.feed: true
+      sxc.staff.heal: true
+      sxc.staff.gmc: true
+      sxc.staff.gma: true
+      sxc.staff.gms: true
+      sxc.staff.gmsp: true
+  sxc.staff.god:
+    description: God command permission
+  sxc.staff.feed:
+    description: Feed command permission
+  sxc.staff.heal:
+    description: Heal command permission
+  sxc.staff.gmc:
+    description: GMC command permission
+  sxc.staff.gma:
+    description: GMA command permission
+  sxc.staff.gms:
+    description: GMS command permission
+  sxc.staff.gmsp:
+    description: GMSP command permission
